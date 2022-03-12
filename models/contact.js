@@ -16,7 +16,7 @@ const MongooseSchema = new mongoose.Schema({
     }
 },{timestamps: true}).plugin(require('mongoose-autopopulate'));
 
-const SchemaModel = module.exports = mongoose.model('project',MongooseSchema);
+const SchemaModel = module.exports = mongoose.model('contact',MongooseSchema);
 
 // C
 module.exports.createData = (data, callback) => {

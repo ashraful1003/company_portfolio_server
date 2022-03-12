@@ -2,17 +2,37 @@ const mongoose = require('../utils/mongoose');
 const constants = require('../utils/constants');
 
 const MongooseSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
     types: {
         type: String,
         required: true,
     },
-    price: {
-        type: Number,
+    total: {
+        type: String,
         required: true,
-    }
-},{timestamps: true}).plugin(require('mongoose-autopopulate'));
+    },
+    method: {
+        type: String,
+        required: true,
+    },
+    phone: {
+        type: String,
+        required: true,
+    },
+    trnxid: {
+        type: String,
+        required: true,
+    },
+}, { timestamps: true }).plugin(require('mongoose-autopopulate'));
 
-const SchemaModel = module.exports = mongoose.model('project',MongooseSchema);
+const SchemaModel = module.exports = mongoose.model('order', MongooseSchema);
 
 // C
 module.exports.createData = (data, callback) => {

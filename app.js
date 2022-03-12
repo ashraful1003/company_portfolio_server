@@ -7,7 +7,7 @@ const path = require('path');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-var User = require('./models/User');
+var User = require('./models/Admin');
 
 //
 const mongoose = require('./utils/mongoose');

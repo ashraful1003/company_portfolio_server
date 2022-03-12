@@ -7,19 +7,14 @@ const MongooseSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    name: {
+    password: {
         type: String,
         required: true,
     },
-    status: {
-        type: String,
-        enum: ['admin', 'blocked', 'user'],
-        default: 'user'
-    }
 }, { timestamps: true }).plugin(require('mongoose-autopopulate'))
 
 //
-const SchemaModel = module.exports = mongoose.model('user', MongooseSchema);
+const SchemaModel = module.exports = mongoose.model('admin', MongooseSchema);
 
 // C
 module.exports.createData = (data, callback) => {

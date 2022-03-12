@@ -2,7 +2,7 @@ const passport = require('passport');
 const JwtStrategy = require('passport-jwt').Strategy,
     ExtractJwt = require('passport-jwt').ExtractJwt;
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/Admin');
 const AccessToken = require('../models/OAuthAccessToken');
 const async = require('async');
 

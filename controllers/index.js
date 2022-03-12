@@ -2,7 +2,7 @@
 var express = require('express'),
     router = express.Router();
 
-router.use('/users', require('./users'));
+router.use('/admins', require('./admins'));
 router.use('/orders', require('./orders'));
 router.use('/contacts', require('./contacts'));
 
